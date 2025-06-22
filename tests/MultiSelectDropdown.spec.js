@@ -23,6 +23,5 @@ test('Handle Multi Dropdowns', async ({page})=>{
     const content2 =await page.locator('#colors').textContent();
     await expect(content2.includes('Black')).toBeFalsy(); //will pass, since black is not in options
 
-
     await page.waitForTimeout(5000);
 })
