@@ -16,12 +16,12 @@ test('Handle Multi Dropdowns', async ({page})=>{
     await expect(options.length).toBe(7);
 
     // 3) Presence of option/value in dropdown
-    const content =await page.locator('#colors').textContent();
-    await expect(content.includes('Blue')).toBeTruthy();
+    const content1 =await page.locator('#colors').textContent();
+    await expect(content1.includes('Blue')).toBeTruthy();
 
     // Negative Assertion
-    const content =await page.locator('#colors').textContent();
-    await expect(content.includes('Black')).toBeFalsy(); //will pass, since black is not in options
+    const content2 =await page.locator('#colors').textContent();
+    await expect(content2.includes('Black')).toBeFalsy(); //will pass, since black is not in options
 
 
     await page.waitForTimeout(5000);
